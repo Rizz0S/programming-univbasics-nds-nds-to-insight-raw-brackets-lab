@@ -4,8 +4,9 @@ def directors_totals
   nds = directors_database
   index = 0
 
+  dir_name_to_movies_total = {}
+
   while index < nds.length do
-    hash = {}
     director_index = 0
     name = nds[index][:name]
     movie = nds[index][:movies]
@@ -16,8 +17,9 @@ def directors_totals
       director_index +=1
     end
 
-    hash[name] = total
+    dir_name_to_movies_total[name] = total
     index +=1
   end
-  pp hash
+
+  return dir_name_to_movies_total
 end

@@ -95,7 +95,7 @@ to help us remember what's happening inside our code.
 vm = [[[{:name=>"Vanilla Cookies", :price=>3}, {:name=>"Pistachio Cookies", :price=>3}, {:name=>"Chocolate Cookies", :price=>3}, {:name=>"Chocolate Chip Cookies", :price=>3}], [{:name=>"Tooth-Melters", :price=>12}, {:name=>"Tooth-Destroyers", :price=>12}, {:name=>"Enamel Eaters", :price=>12}, {:name=>"Dentist's Nighmare", :price=>20}], [{:name=>"Gummy Sour Apple", :price=>3}, {:name=>"Gummy Apple", :price=>5}, {:name=>"Gummy Moldy Apple", :price=>1}]], [[{:name=>"Grape Drink", :price=>1}, {:name=>"Orange Drink", :price=>1}, {:name=>"Pineapple Drink", :price=>1}], [{:name=>"Mints", :price=>13}, {:name=>"Curiously Toxic Mints", :price=>1000}, {:name=>"US Mints", :price=>99}]]]
 
 
-grand_piece_total = 0
+grand_total = 0
 row_index = 0
 while row_index < vm.length do
   column_index = 0
@@ -105,8 +105,8 @@ while row_index < vm.length do
     while inner_index < inner_len do
       # Explanation!
       # vm[row][column][spinner]
-      # spinner is full of Hashes with keys :pieces and :name
-      grand_piece_total += vm[row_index][column_index][inner_index][:pieces]
+      # spinner is full of Hashes with keys :price and :name
+      grand_total += vm[row_index][column_index][inner_index][:price]
       inner_index += 1
     end
     column_index += 1
@@ -114,7 +114,7 @@ while row_index < vm.length do
   row_index += 1
 end
 
-p grand_piece_total #=> 1192
+p grand_total #=> 1192
 ```
 
 Look at that! It's an _insight_! All these snacks are worth `$1192.00`

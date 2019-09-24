@@ -2,9 +2,10 @@
 
 ## Introduction
 
-In this lab we're going to generate our first insight: how many pieces are in
-the vending machine. You're then going to complete a lab where we calculate how
-much money the directors' movies made.
+In this lab we're going to generate our first insight: What is the total retail
+value of the snacks in the vending machine. You're then going to complete a lab
+where we calculate how much money the directors' movies made using the same
+data from the previous lesson.
 
 To accomplish this, we're going to continue following the strategy we described
 a few lessons ago:
@@ -15,8 +16,7 @@ a few lessons ago:
 
 The good thing is that there's nothing new to learn here. Based on what we saw
 in the NDS and what you know about REPETITION and `Array` syntax, we have all we
-need! Let's answer the question: "***How many pieces of snacks are in this
-vending machine?***"
+need! Let's answer the question: "***What are all these snacks worth?***
 
 ## Building on NDS Exploring Code
 
@@ -81,9 +81,9 @@ Row 1 has [[{:name=>"Grape Drink", :price=>1}, {:name=>"Orange Drink", :price=>1
 ```
 
 Based on this code and its output, we can slowly step toward a model of how to
-get the piece counts we need. As part of our strategy we're still printing out
-useful "debug" data to the screen. In that debug data we see a way forward.
-Instead of printing out:
+get the prices we need to add together. As part of our strategy we're still
+printing out useful "debug" data to the screen. In that debug data we see a way
+forward.  Instead of printing out:
 
 `(1, 0, 3) is: {:name=>"Grape Drink", :price=>1}`
 
@@ -117,7 +117,7 @@ end
 p grand_piece_total #=> 1192
 ```
 
-Look at that! It's an _insight_! There are `1192` pieces!
+Look at that! It's an _insight_! All these snacks are worth `$1192.00`
 
 ## Lab
 
@@ -137,8 +137,8 @@ hash = {
 ## Conclusion
 
 In this lesson, we used the "raw" or "basic" `Array` and `Hash` methods to
-retrieve data out of an NDS. We even generated an insight: "number of pieces in
-the vending machine." Not bad!
+retrieve data out of an NDS. We even generated an insight: "total retail value
+of all the snacks in the vending machine." Not bad!
 
 But our code is notably lacking any methods. We've not done anything to make
 our code _abstract_. The code we've written gets the job done, but all that
@@ -147,7 +147,7 @@ helpful comment that explains:
 
 ```ruby
 # vm[row][column][spinner]
-# spinner is full of Hashes with keys :pieces and :name
+# spinner is full of Hashes with keys :price and :name
 ```
 
 our code is very hard to read, understand, and maintain. To make this code

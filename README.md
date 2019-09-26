@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab we're going to generate our first insight: What is the total retail
+In this lab, we're going to generate our first insight: What is the total retail
 value of the snacks in the vending machine. You're then going to complete a lab
 where we calculate how much money the directors' movies made using the same
 data from the previous lesson.
@@ -10,17 +10,30 @@ data from the previous lesson.
 To accomplish this, we're going to continue following the strategy we described
 a few lessons ago:
 
-> 2. Use [] to verify your understanding from Step 1
+> 2. Use `[]` to verify your understanding from Step 1
 >   * Print values to verify your understanding
 >   * Leave code comments and documentation for yourself
 
-The good thing is that there's nothing new to learn here. Based on what we saw
-in the NDS and what you know about REPETITION and `Array` syntax, we have all we
-need! Let's answer the question: "***What are all these snacks worth?***
+What's so special about the `[]` method? By using `[]` to dig into `Array`s or
+`Hash`es we can verify that we know how to "get" critical data out of the NDS.
+Since we have a human-friendly picture of the NDS (thanks to Step 1), we can
+make sure we get "get" the critical data back out by writing statements like
+`vending_machine[0][1][0][:price]`. In that bit of code, the `[]` help us
+"tunnel into" the NDS so that we have confidence when we go to extract
+_insights_ from the NDS.
+
+The good thing is that there's nothing new to learn here. We're just going to
+apply what we know to a much larger data set, a complex NDS. In addition to the
+`[]` method, we'll:
+
+* use loops and variables to move through `Array`s and `Hash`es
+* set and update variables to hold answers
+
+Let's answer the question: "***What are all these snacks worth?***
 
 ## Building on NDS Exploring Code
 
-In the previous lesson we noted that code you write to explore an NDS is rarely
+In the previous lesson, we noted that code you write to explore an NDS is rarely
 wasted.
 
 ```ruby
@@ -81,7 +94,7 @@ Row 1 has [[{:name=>"Grape Drink", :price=>1}, {:name=>"Orange Drink", :price=>1
 ```
 
 Based on this code and its output, we can slowly step toward a model of how to
-get the prices we need to add together. As part of our strategy we're still
+get the prices we need to add together. As part of our strategy, we're still
 printing out useful "debug" data to the screen. In that debug data we see a way
 forward.  Instead of printing out:
 
@@ -121,7 +134,7 @@ Look at that! It's an _insight_! All these snacks are worth `$1192.00`
 
 ## Lab
 
-In this lab you're going to work through the directors database and create a
+In this lab, you're going to work through the directors database and create a
 `Hash` that records the director's name as a key, and the total grosses of all of their
 movies as the value. For example:
 

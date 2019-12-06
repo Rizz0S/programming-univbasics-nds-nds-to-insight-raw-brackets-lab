@@ -15,7 +15,7 @@ def directors_totals(nds)
 
   dir_index = 0
 
-  while dir_index <= nds.length do
+  while dir_index < nds.length do
     mov_index = 0
     total_profit = 0
     while mov_index < nds[dir_index][:movies].count do

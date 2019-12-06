@@ -10,8 +10,7 @@ def directors_totals(nds)
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
 
   result = {
-    name: [],
-    profit: []
+
   }
 
   dir_index = 0
@@ -23,8 +22,7 @@ def directors_totals(nds)
       total_profit += nds[dir_index][:movies][mov_index][:worldwide_gross]
       mov_index += 1
     end
-    result[:name][dir_index] = nds[dir_index][:name]
-    result[:profit][dir_index] = total_profit
+    result[nds[dir_index]] = total_profit
     dir_index += 1
   end
 

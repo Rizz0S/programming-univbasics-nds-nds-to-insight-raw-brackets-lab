@@ -20,7 +20,7 @@ def directors_totals(nds)
     total_profit = 0
     while mov_index < nds[dir_index][:movies].count do
       total_profit += nds[dir_index][:movies][mov_index][:worldwide_gross]
-      puts nds[dir_index][:movies][mov_index][:worldwide_gross]
+      puts total_profit
       mov_index += 1
     end
     result[nds[dir_index]] = total_profit
